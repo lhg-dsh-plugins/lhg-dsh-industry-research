@@ -1,0 +1,13 @@
+packages:
+  - .
+
+nodeLinker: hoisted
+onlyBuiltDependencies:
+  - esbuild
+# The @deepseek-ai family is published inside the registry's minimum-release-age
+# window (0.1.2-rc.1 today); exclude the whole scope so installs resolve.
+minimumReleaseAgeExclude:
+  - '@deepseek-ai/*'
+allowBuilds:
+  esbuild: true
+verifyDepsBeforeRun: false
